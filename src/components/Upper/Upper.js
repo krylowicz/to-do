@@ -52,15 +52,15 @@ const Button = styled.button`
   font-size: 1.2rem;
 `;
 
-const Upper = () => (
+const Upper = ({value, onChange, onClick}) => (
     <Wrapper>
         <Heading>to-do app</Heading>
         <Row>
             <div>
-                <Input placeholder="add task" />
+                <Input value={value} type="text" placeholder="add task" onChange={onChange} />
                 <ItemBar />
             </div>
-            <Button>add</Button>
+            <Button onClick={onClick}>add</Button>
         </Row>
     </Wrapper>
 );

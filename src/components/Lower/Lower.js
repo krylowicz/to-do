@@ -12,11 +12,9 @@ const Wrapper = styled.div`
   align-items: start;
 `;
 
-const Lower = () => (
+const Lower = ({listState}) => (
     <Wrapper>
-        <TaskList>
-            <Task />
-        </TaskList>
+        <TaskList />
     </Wrapper>
 );
 

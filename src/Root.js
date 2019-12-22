@@ -1,5 +1,7 @@
 import React from 'react';
 import './index.css';
+import Upper from './components/Upper/Upper';
+import Lower from "./components/Lower/Lower";
 
 class Root extends React.Component {
     state = {
@@ -22,8 +24,8 @@ class Root extends React.Component {
     render() {
         return (
             <>
-                <input value={this.state.userInput} type="text" placeholder="add your item" onChange={e => this.handleChange(e.target.value)}/>
-                <button onClick={() => this.addItem(this.state.userInput)}>add item</button>
+                <Upper value={this.state.userInput} onChange={e => this.handleChange(e.target.value)} onClick={() => this.addItem(this.state.userInput)}/>
+                {/*<Lower />*/}
                 <ul>
                     {this.state.list.map(item => <li>{item}</li>)}
                 </ul>
